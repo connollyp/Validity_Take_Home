@@ -88,7 +88,7 @@ public class MonolithStarterApp implements InitializingBean {
             env.getActiveProfiles());
     }
 
-    public static int min(int a, int b, int c){
+    public static int Min(int a, int b, int c){
         int min = a; //Minimum distance, defaults to a
 
         //Select minimum value from a, b, and c

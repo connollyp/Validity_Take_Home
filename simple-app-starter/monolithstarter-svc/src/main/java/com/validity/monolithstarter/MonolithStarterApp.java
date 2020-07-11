@@ -17,6 +17,11 @@ import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Collection;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class MonolithStarterApp implements InitializingBean {
 
@@ -153,6 +158,38 @@ public class MonolithStarterApp implements InitializingBean {
             }
         }
         return d[n][m];
+    }
+
+    //Gets the conetents of the specified file and returns it as a string
+    public static String getFileContents(String filepath){
+        BufferedReader br = null;
+        String fileContent;
+
+        try {
+
+            br = new BufferedReader(new FileReader(filepath));
+
+            fileContent = br.readLine();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        return fileContent;
+    }
+
+    public static int[] detectDuplicates(String filepath){
+
     }
 
 

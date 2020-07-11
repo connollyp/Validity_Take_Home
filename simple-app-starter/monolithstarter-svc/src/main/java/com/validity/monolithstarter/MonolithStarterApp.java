@@ -89,7 +89,7 @@ public class MonolithStarterApp implements InitializingBean {
     }
 
     private static void test(){
-        System.out.println("Hello Worlds");
+        System.out.println("Hello World");
     }
 
 }

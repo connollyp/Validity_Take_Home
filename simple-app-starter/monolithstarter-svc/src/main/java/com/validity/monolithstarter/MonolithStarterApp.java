@@ -88,5 +88,69 @@ public class MonolithStarterApp implements InitializingBean {
             env.getActiveProfiles());
     }
 
+    public static int min(int a, int b, int c){
+        int min = a; //Minimum distance, defaults to a
+
+        if(b < min){
+            min = b;
+        }
+        if(c < min){
+            min = c;
+        }
+
+        return min;
+    }
+
+    //Generic implementation of the Levenshtein algorithm to find the difference between two strings
+    // Based off of this implementation https://people.cs.pitt.edu/~kirk/cs1501/Pruhs/Spring2006/assignments/editdistance/Levenshtein%20Distance.htm
+    public static int Levenshtein(String s, String t){
+        int distances[][]; //Keeps track of differences between the two strings
+        int n; //Length of string s
+        int m; //Length of string t
+        char si; //Current char being stored from s
+        char tj; //Current char being stored from t
+        int diff; //Integer value to determine difference between two chars
+
+        n = s.length();
+        m = t.length();
+
+        //If one of the strings is empty return the length of the other string
+        if(n == 0){
+            return m;
+        }
+        if(m == 0){
+            return n;
+        }
+
+        d = newint[n+1][m+1];
+
+        for(int i = 0; i<= n; i++){
+            d[i][0] = i;
+        }
+
+        for(int j = 0; j <= m; i++){
+            d[0][j] = j;
+        }
+
+        for(int i = 1; i<= n; i++){
+
+            si = s.charAt(i - 1);
+
+            for(int j = 1; j <= m; j++){
+
+                tj = t.charAt(j - 1);
+
+                if(si == tj){
+                    diff = 0;
+                }else{
+                    diff = 1;
+                }
+
+                d[i][jj] = Min(d[i-1][j]+1, d[i][j-1]+1, d[i-1][j-1]+diff);
+            }
+        }
+        return d[n][m];
+    }
+
 
 }

@@ -87,6 +87,6 @@ public class MonolithStarterApp implements InitializingBean {
             contextPath,
             env.getActiveProfiles());
     }
-    
+
 
 }

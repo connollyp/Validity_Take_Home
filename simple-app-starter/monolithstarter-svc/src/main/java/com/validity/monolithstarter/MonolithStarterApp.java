@@ -91,6 +91,7 @@ public class MonolithStarterApp implements InitializingBean {
     public static int min(int a, int b, int c){
         int min = a; //Minimum distance, defaults to a
 
+        //Select minimum value from a, b, and c
         if(b < min){
             min = b;
         }
@@ -122,16 +123,18 @@ public class MonolithStarterApp implements InitializingBean {
             return n;
         }
 
+        //Set number of columns to the size of s+1, set number of rows to the size of t+1
         d = newint[n+1][m+1];
 
+        //Initalizes differences for the 0th column and row to the values of i and j
         for(int i = 0; i<= n; i++){
             d[i][0] = i;
         }
-
         for(int j = 0; j <= m; i++){
             d[0][j] = j;
         }
 
+        //Compare each char and determine if they are different, store value of difference in the matrix
         for(int i = 1; i<= n; i++){
 
             si = s.charAt(i - 1);
@@ -146,7 +149,7 @@ public class MonolithStarterApp implements InitializingBean {
                     diff = 1;
                 }
 
-                d[i][jj] = Min(d[i-1][j]+1, d[i][j-1]+1, d[i-1][j-1]+diff);
+                d[i][j] = Min(d[i-1][j]+1, d[i][j-1]+1, d[i-1][j-1]+diff);
             }
         }
         return d[n][m];

@@ -59,6 +59,8 @@ public class MonolithStarterApp implements InitializingBean {
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);
+        String test = getFileContents("/Users/patrickconnolly/Documents/Job Search/Validity_Take_Home/simple-app-starter/test-files/normal.csv");
+        System.out.println(test);
     }
 
     private static void logApplicationStartup(Environment env) {
@@ -116,6 +118,8 @@ public class MonolithStarterApp implements InitializingBean {
         char si; //Current char being stored from s
         char tj; //Current char being stored from t
         int diff; //Integer value to determine difference between two chars
+        int i;
+        int j;
 
         n = s.length();
         m = t.length();
@@ -129,22 +133,22 @@ public class MonolithStarterApp implements InitializingBean {
         }
 
         //Set number of columns to the size of s+1, set number of rows to the size of t+1
-        d = newint[n+1][m+1];
+        distances = new int[n+1][m+1];
 
         //Initalizes differences for the 0th column and row to the values of i and j
-        for(int i = 0; i<= n; i++){
-            d[i][0] = i;
+        for(i = 0; i<= n; i++){
+            distances[i][0] = i;
         }
-        for(int j = 0; j <= m; i++){
-            d[0][j] = j;
+        for(j = 0; j <= m; i++){
+            distances[0][j] = j;
         }
 
         //Compare each char and determine if they are different, store value of difference in the matrix
-        for(int i = 1; i<= n; i++){
+        for(i = 1; i<= n; i++){
 
             si = s.charAt(i - 1);
 
-            for(int j = 1; j <= m; j++){
+            for(j = 1; j <= m; j++){
 
                 tj = t.charAt(j - 1);
 
@@ -154,22 +158,28 @@ public class MonolithStarterApp implements InitializingBean {
                     diff = 1;
                 }
 
-                d[i][j] = Min(d[i-1][j]+1, d[i][j-1]+1, d[i-1][j-1]+diff);
+                distances[i][j] = Min(distances[i-1][j]+1, distances[i][j-1]+1, distances[i-1][j-1]+diff);
             }
         }
-        return d[n][m];
+        return distances[n][m];
     }
+
+    //TO-DO Saving file path here for now
+    // /Users/patrickconnolly/Documents/Job Search/Validity_Take_Home/simple-app-starter/test-files
 
     //Gets the conetents of the specified file and returns it as a string
     public static String getFileContents(String filepath){
         BufferedReader br = null;
-        String fileContent;
+        String fileContent = "";
+        String input = "";
 
         try {
 
             br = new BufferedReader(new FileReader(filepath));
 
-            fileContent = br.readLine();
+            while((input = br.readLine()) != null){
+                fileContent = fileContent + input + "\n";
+            }
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -189,7 +199,7 @@ public class MonolithStarterApp implements InitializingBean {
     }
 
     public static int[] detectDuplicates(String filepath){
-
+        
     }
 
 

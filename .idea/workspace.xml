@@ -50,8 +50,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef6e51dc-98d8-4ee8-b637-9690f746f04c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Validity_Take_Home.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/MonolithStarterApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/config/DefaultProfileUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/config/SecurityConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/rest/HelloController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/service/HelloService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/web/MainController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/config/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/templates/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/templates/main_dev.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/mvnw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/java/com/validity/monolithstarter/MonolithStarterApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/java/com/validity/monolithstarter/MonolithStarterApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/resources/templates/main_dev.html" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/resources/templates/main_dev.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +81,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1eXq9GgLpJy9ETBR0nN5iH9eBSF" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -71,9 +90,29 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/simple-app-starter/monolithstarter-static" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/simple-app-starter/monolithstarter-static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/.mvn/wrapper" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="maven-wrapper.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/.mvn/wrapper/maven-wrapper.jar" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.maven-wrapper.jar" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -98,8 +137,31 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1878" height="305" key="GridCell.Tab.0.bottom" timestamp="1594665055775">
+      <screen x="-128" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="305" key="GridCell.Tab.0.bottom/1792.-1267.1080.1920/-128.-1080.1920.1080/0.0.1792.1120@-128.-1080.1920.1080" timestamp="1594665055775" />
+    <state width="1878" height="305" key="GridCell.Tab.0.center" timestamp="1594665055774">
+      <screen x="-128" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="305" key="GridCell.Tab.0.center/1792.-1267.1080.1920/-128.-1080.1920.1080/0.0.1792.1120@-128.-1080.1920.1080" timestamp="1594665055774" />
+    <state width="1878" height="305" key="GridCell.Tab.0.left" timestamp="1594665055773">
+      <screen x="-128" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="305" key="GridCell.Tab.0.left/1792.-1267.1080.1920/-128.-1080.1920.1080/0.0.1792.1120@-128.-1080.1920.1080" timestamp="1594665055773" />
+    <state width="1878" height="305" key="GridCell.Tab.0.right" timestamp="1594665055774">
+      <screen x="-128" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="305" key="GridCell.Tab.0.right/1792.-1267.1080.1920/-128.-1080.1920.1080/0.0.1792.1120@-128.-1080.1920.1080" timestamp="1594665055774" />
+    <state x="539" y="-908" width="678" height="735" key="find.popup" timestamp="1594666887217">
+      <screen x="-128" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="539" y="-908" width="678" height="735" key="find.popup/1792.-1267.1080.1920/-128.-1080.1920.1080/0.0.1792.1120@-128.-1080.1920.1080" timestamp="1594666887217" />
   </component>
 </project>

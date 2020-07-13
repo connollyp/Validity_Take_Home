@@ -1,0 +1,6 @@
+com/validity/monolithstarter/MonolithStarterApp.class
+com/validity/monolithstarter/config/SecurityConfiguration.class
+com/validity/monolithstarter/config/DefaultProfileUtil.class
+com/validity/monolithstarter/web/MainController.class
+com/validity/monolithstarter/service/HelloService.class
+com/validity/monolithstarter/rest/HelloController.class

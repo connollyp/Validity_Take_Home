@@ -201,7 +201,7 @@ public class MonolithStarterApp implements InitializingBean {
         int numEntries = fileContent.split("\n").length;
         int numColumns = fileContent.split("\n")[0].split(",").length;
 
-        int duplicates[][] = new int[numEntries-1][1];
+        int duplicates[][] = new int[numEntries][1];
 
         for(int i = 1; i < numEntries; i++){
             String currentEntry = fileContent.split("\n")[i];
@@ -230,7 +230,6 @@ public class MonolithStarterApp implements InitializingBean {
                 }else{
                     duplicates[i][0] = -1;
                 }
-
             }
         }
 

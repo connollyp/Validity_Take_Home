@@ -50,27 +50,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef6e51dc-98d8-4ee8-b637-9690f746f04c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Validity_Take_Home.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/MonolithStarterApp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/config/DefaultProfileUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/config/SecurityConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/rest/HelloController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/service/HelloService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/web/MainController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/config/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/templates/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/templates/main_dev.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/mvnw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/java/com/validity/monolithstarter/MonolithStarterApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/java/com/validity/monolithstarter/MonolithStarterApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/resources/templates/main_dev.html" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/resources/templates/main_dev.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/MonolithStarterApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/MonolithStarterApp.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -60,7 +60,7 @@ public class MonolithStarterApp implements InitializingBean {
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);
         String test = getFileContents("/Users/patrickconnolly/Documents/Job Search/Validity_Take_Home/simple-app-starter/test-files/normal.csv");
-        System.out.println(test);
+        detectDuplicates("/Users/patrickconnolly/Documents/Job Search/Validity_Take_Home/simple-app-starter/test-files/normal.csv");
     }
 
     private static void logApplicationStartup(Environment env) {
@@ -136,10 +136,10 @@ public class MonolithStarterApp implements InitializingBean {
         distances = new int[n+1][m+1];
 
         //Initalizes differences for the 0th column and row to the values of i and j
-        for(i = 0; i<= n; i++){
+        for(i = 0; i < n; i++){
             distances[i][0] = i;
         }
-        for(j = 0; j <= m; i++){
+        for(j = 0; j < m; j++){
             distances[0][j] = j;
         }
 
@@ -164,8 +164,6 @@ public class MonolithStarterApp implements InitializingBean {
         return distances[n][m];
     }
 
-    //TO-DO Saving file path here for now
-    // /Users/patrickconnolly/Documents/Job Search/Validity_Take_Home/simple-app-starter/test-files
 
     //Gets the conetents of the specified file and returns it as a string
     public static String getFileContents(String filepath){
@@ -199,7 +197,46 @@ public class MonolithStarterApp implements InitializingBean {
     }
 
     public static int[] detectDuplicates(String filepath){
-        
+        String fileContent = getFileContents(filepath);
+        int numEntries = fileContent.split("\n").length;
+        int numColumns = fileContent.split("\n")[0].split(",").length;
+
+        int duplicates[][] = new int[numEntries-1][1];
+
+        for(int i = 1; i < numEntries; i++){
+            String currentEntry = fileContent.split("\n")[i];
+
+            for(int j = 1; j < numEntries; j++){
+
+                if(i == j){
+                    break;
+                }
+
+                String entryToCompare = fileContent.split("\n")[j];
+
+                int diff = 0;
+
+                for(int k = 1; k < numColumns; k++){
+                    String s = currentEntry.split(",")[k];
+                    String t = entryToCompare.split(",")[k];
+
+                    diff += Levenshtein(s,t);
+
+                }
+
+                if(diff < 5){
+                    duplicates[i][0] = j;
+                    System.out.printf("%d is duplicates with %d\n", i+1, j+1);
+                }else{
+                    duplicates[i][0] = -1;
+                }
+
+            }
+        }
+
+        int test[] = new int[1];
+        test[0] = 0;
+        return test;
     }
 
 

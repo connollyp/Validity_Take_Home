@@ -196,17 +196,17 @@ public class MonolithStarterApp implements InitializingBean {
         return fileContent;
     }
 
-    public static int[] detectDuplicates(String filepath){
+    public static int[][] detectDuplicates(String filepath){
         String fileContent = getFileContents(filepath);
-        int numEntries = fileContent.split("\n").length;
+        int numRows = fileContent.split("\n").length;
         int numColumns = fileContent.split("\n")[0].split(",").length;
 
-        int duplicates[][] = new int[numEntries][1];
+        int duplicates[][] = new int[numRows][1];
 
-        for(int i = 1; i < numEntries; i++){
+        for(int i = 1; i < numRows; i++){
             String currentEntry = fileContent.split("\n")[i];
 
-            for(int j = 1; j < numEntries; j++){
+            for(int j = 1; j < numRows; j++){
 
                 if(i == j){
                     break;
@@ -220,11 +220,15 @@ public class MonolithStarterApp implements InitializingBean {
                     String s = currentEntry.split(",")[k];
                     String t = entryToCompare.split(",")[k];
 
+                    if(s.length() == 0 || t.length() == 0){
+                        break;
+                    }
+
                     diff += Levenshtein(s,t);
 
                 }
 
-                if(diff < 5){
+                if(diff < 20){
                     duplicates[i][0] = j;
                     System.out.printf("%d is duplicates with %d\n", i+1, j+1);
                 }else{
@@ -233,9 +237,7 @@ public class MonolithStarterApp implements InitializingBean {
             }
         }
 
-        int test[] = new int[1];
-        test[0] = 0;
-        return test;
+        return duplicates;
     }
 
 

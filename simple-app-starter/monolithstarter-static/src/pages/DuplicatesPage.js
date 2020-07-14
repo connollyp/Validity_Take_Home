@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import Duplicates from '../components/Duplicates';
-import nonDuplicates from '../components/nonDuplicates'
+import NonDuplicates from '../components/nonDuplicates'
 
-class DuplicatePage extends Component {
+class DuplicatesPage extends Component {
   render() {
     return (
       <div className='app'>
         <div className='app-body'>
           <Container fluid className='text-center'>
-              <Container className='duplicate-container'>
+              <Container>
+                <b> Duplicate Entries</b>
                 <Duplicates />
-               </Container>
-               <Container className='nonduplicate-container'>
-                <nonDuplicates />
-               </Container>
+
+                <br/>
+
+                <b>Non Duplicate Entries</b>
+                <NonDuplicates />
+              </Container>
           </Container>
         </div>
       </div>
@@ -22,4 +25,4 @@ class DuplicatePage extends Component {
   }
 }
 
-export default DuplicatePage;
+export default DuplicatesPage;

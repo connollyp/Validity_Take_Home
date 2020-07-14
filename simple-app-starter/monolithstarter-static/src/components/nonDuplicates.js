@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { getNonDuplicates } from "../actions/duplicateActions";
+import { getNonDuplicates } from "../actions/nonDuplicateActions";
 
-class nonDuplicates extends Component {
+class NonDuplicates extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,4 +31,4 @@ class nonDuplicates extends Component {
   }
 }
 
-export default nonDuplicates;
+export default NonDuplicates;

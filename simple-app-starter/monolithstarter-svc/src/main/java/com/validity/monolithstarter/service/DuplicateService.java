@@ -13,7 +13,7 @@ import java.io.IOException;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;
 
-@service
+@Service
 public class DuplicateService {
 
     /**
@@ -223,33 +223,33 @@ public class DuplicateService {
 
         for(int i = 1; i < numRows; i++){
             entry.put("id", i);
-            entry.put("FirstName", fileContent.split("\n")[i].split(",")[1] + "\n");
-            entry.put("LastName", fileContent.split("\n")[i].split(",")[2] + "\n");
-            entry.put("Company", fileContent.split("\n")[i].split(",")[3] + "\n");
-            entry.put("Email", fileContent.split("\n")[i].split(",")[4] + "\n");
-            entry.put("Address 1", fileContent.split("\n")[i].split(",")[5] + "\n");
-            entry.put("Address 2", fileContent.split("\n")[i].split(",")[6] + "\n");
-            entry.put("Zip", fileContent.split("\n")[i].split(",")[7] + "\n");
-            entry.put("City", fileContent.split("\n")[i].split(",")[8] + "\n");
-            entry.put("State Long", fileContent.split("\n")[i].split(",")[9] + "\n");
-            entry.put("State", fileContent.split("\n")[i].split(",")[10] + "\n");
-            entry.put("Phone", fileContent.split("\n")[i].split(",")[11] + "\n");
+            entry.put("FirstName", fileContent.split("\n")[i].split(",")[1]);
+            entry.put("LastName", fileContent.split("\n")[i].split(",")[2]);
+            entry.put("Company", fileContent.split("\n")[i].split(",")[3]);
+            entry.put("Email", fileContent.split("\n")[i].split(",")[4]);
+            entry.put("Address 1", fileContent.split("\n")[i].split(",")[5]);
+            entry.put("Address 2", fileContent.split("\n")[i].split(",")[6]);
+            entry.put("Zip", fileContent.split("\n")[i].split(",")[7]);
+            entry.put("City", fileContent.split("\n")[i].split(",")[8]);
+            entry.put("State Long", fileContent.split("\n")[i].split(",")[9]);
+            entry.put("State", fileContent.split("\n")[i].split(",")[10]);
+            entry.put("Phone", fileContent.split("\n")[i].split(",")[11]);
 
             if(duplicates[i][0] != -1){
                 JSONObject duplicate = new JSONObject();
 
                 duplicate.put("id", duplicates[i][0]);
-                duplicate.put("FirstName", fileContent.split("\n")[duplicates[i][0]].split(",")[1] + "\n");
-                duplicate.put("LastName", fileContent.split("\n")[duplicates[i][0]].split(",")[2] + "\n");
-                duplicate.put("Company", fileContent.split("\n")[duplicates[i][0]].split(",")[3] + "\n");
-                duplicate.put("Email", fileContent.split("\n")[duplicates[i][0]].split(",")[4] + "\n");
-                duplicate.put("Address 1", fileContent.split("\n")[duplicates[i][0]].split(",")[5] + "\n");
-                duplicate.put("Address 2", fileContent.split("\n")[duplicates[i][0]].split(",")[6] + "\n");
-                duplicate.put("Zip", fileContent.split("\n")[duplicates[i][0]].split(",")[7] + "\n");
-                duplicate.put("City", fileContent.split("\n")[duplicates[i][0]].split(",")[8] + "\n");
-                duplicate.put("State Long", fileContent.split("\n")[duplicates[i][0]].split(",")[9]+ "\n");
-                duplicate.put("State", fileContent.split("\n")[duplicates[i][0]].split(",")[10]+ "\n");
-                duplicate.put("Phone", fileContent.split("\n")[duplicates[i][0]].split(",")[11]+ "\n");
+                duplicate.put("FirstName", fileContent.split("\n")[duplicates[i][0]].split(",")[1]);
+                duplicate.put("LastName", fileContent.split("\n")[duplicates[i][0]].split(",")[2]);
+                duplicate.put("Company", fileContent.split("\n")[duplicates[i][0]].split(",")[3]);
+                duplicate.put("Email", fileContent.split("\n")[duplicates[i][0]].split(",")[4]);
+                duplicate.put("Address 1", fileContent.split("\n")[duplicates[i][0]].split(",")[5]);
+                duplicate.put("Address 2", fileContent.split("\n")[duplicates[i][0]].split(",")[6]);
+                duplicate.put("Zip", fileContent.split("\n")[duplicates[i][0]].split(",")[7]);
+                duplicate.put("City", fileContent.split("\n")[duplicates[i][0]].split(",")[8]);
+                duplicate.put("State Long", fileContent.split("\n")[duplicates[i][0]].split(",")[9]);
+                duplicate.put("State", fileContent.split("\n")[duplicates[i][0]].split(",")[10]);
+                duplicate.put("Phone", fileContent.split("\n")[duplicates[i][0]].split(",")[11]);
 
                 entry.put("duplicate", duplicate);
             }
@@ -281,17 +281,17 @@ public class DuplicateService {
 
         for(int i = 1; i < numRows; i++){
             entry.put("id", i);
-            entry.put("FirstName", fileContent.split("\n")[i].split(",")[1] + "\n");
-            entry.put("LastName", fileContent.split("\n")[i].split(",")[2] + "\n");
-            entry.put("Company", fileContent.split("\n")[i].split(",")[3] + "\n");
-            entry.put("Email", fileContent.split("\n")[i].split(",")[4] + "\n");
-            entry.put("Address 1", fileContent.split("\n")[i].split(",")[5] + "\n");
-            entry.put("Address 2", fileContent.split("\n")[i].split(",")[6] + "\n");
-            entry.put("Zip", fileContent.split("\n")[i].split(",")[7] + "\n");
-            entry.put("City", fileContent.split("\n")[i].split(",")[8] + "\n");
-            entry.put("State Long", fileContent.split("\n")[i].split(",")[9] + "\n");
-            entry.put("State", fileContent.split("\n")[i].split(",")[10] + "\n");
-            entry.put("Phone", fileContent.split("\n")[i].split(",")[11] + "\n");
+            entry.put("FirstName", fileContent.split("\n")[i].split(",")[1]);
+            entry.put("LastName", fileContent.split("\n")[i].split(",")[2]);
+            entry.put("Company", fileContent.split("\n")[i].split(",")[3]);
+            entry.put("Email", fileContent.split("\n")[i].split(",")[4]);
+            entry.put("Address 1", fileContent.split("\n")[i].split(",")[5]);
+            entry.put("Address 2", fileContent.split("\n")[i].split(",")[6]);
+            entry.put("Zip", fileContent.split("\n")[i].split(",")[7]);
+            entry.put("City", fileContent.split("\n")[i].split(",")[8]);
+            entry.put("State Long", fileContent.split("\n")[i].split(",")[9]);
+            entry.put("State", fileContent.split("\n")[i].split(",")[10]);
+            entry.put("Phone", fileContent.split("\n")[i].split(",")[11]);
 
             if(duplicates[i][0] == -1 || duplicates[i][0] < i){
                 array.add(entry);
@@ -324,32 +324,31 @@ public class DuplicateService {
         for(int i = 1; i < numRows; i++){
             if(duplicates[i][0] != -1 && duplicates[i][0] < i){
                 entry.put("id", i);
-                entry.put("FirstName", fileContent.split("\n")[i].split(",")[1] + "\n");
-                entry.put("LastName", fileContent.split("\n")[i].split(",")[2] + "\n");
-                entry.put("Company", fileContent.split("\n")[i].split(",")[3] + "\n");
-                entry.put("Email", fileContent.split("\n")[i].split(",")[4] + "\n");
-                entry.put("Address 1", fileContent.split("\n")[i].split(",")[5] + "\n");
-                entry.put("Address 2", fileContent.split("\n")[i].split(",")[6] + "\n");
-                entry.put("Zip", fileContent.split("\n")[i].split(",")[7] + "\n");
-                entry.put("City", fileContent.split("\n")[i].split(",")[8] + "\n");
-                entry.put("State Long", fileContent.split("\n")[i].split(",")[9] + "\n");
-                entry.put("State", fileContent.split("\n")[i].split(",")[10] + "\n");
-                entry.put("Phone", fileContent.split("\n")[i].split(",")[11] + "\n");
+                entry.put("FirstName", fileContent.split("\n")[i].split(",")[1]);
+                entry.put("LastName", fileContent.split("\n")[i].split(",")[2]);
+                entry.put("Company", fileContent.split("\n")[i].split(",")[3]);
+                entry.put("Email", fileContent.split("\n")[i].split(",")[4]);
+                entry.put("Address 1", fileContent.split("\n")[i].split(",")[5]);
+                entry.put("Address 2", fileContent.split("\n")[i].split(",")[6]);
+                entry.put("Zip", fileContent.split("\n")[i].split(",")[7]);
+                entry.put("City", fileContent.split("\n")[i].split(",")[8]);
+                entry.put("State Long", fileContent.split("\n")[i].split(",")[9]);
+                entry.put("State", fileContent.split("\n")[i].split(",")[10]);
+                entry.put("Phone", fileContent.split("\n")[i].split(",")[11]);
 
                 JSONObject duplicate = new JSONObject();
 
                 duplicate.put("id", duplicates[i][0]);
-                duplicate.put("FirstName", fileContent.split("\n")[duplicates[i][0]].split(",")[1] + "\n");
-                duplicate.put("LastName", fileContent.split("\n")[duplicates[i][0]].split(",")[2] + "\n");
-                duplicate.put("Company", fileContent.split("\n")[duplicates[i][0]].split(",")[3] + "\n");
-                duplicate.put("Email", fileContent.split("\n")[duplicates[i][0]].split(",")[4] + "\n");
-                duplicate.put("Address 1", fileContent.split("\n")[duplicates[i][0]].split(",")[5] + "\n");
-                duplicate.put("Address 2", fileContent.split("\n")[duplicates[i][0]].split(",")[6] + "\n");
-                duplicate.put("Zip", fileContent.split("\n")[duplicates[i][0]].split(",")[7] + "\n");
-                duplicate.put("City", fileContent.split("\n")[duplicates[i][0]].split(",")[8] + "\n");
-                duplicate.put("State Long", fileContent.split("\n")[duplicates[i][0]].split(",")[9]+ "\n");
-                duplicate.put("State", fileContent.split("\n")[duplicates[i][0]].split(",")[10]+ "\n");
-                duplicate.put("Phone", fileContent.split("\n")[duplicates[i][0]].split(",")[11]+ "\n");
+                duplicate.put("FirstName", fileContent.split("\n")[duplicates[i][0]].split(",")[1]);
+                duplicate.put("LastName", fileContent.split("\n")[duplicates[i][0]].split(",")[2]);
+                duplicate.put("Company", fileContent.split("\n")[duplicates[i][0]].split(",")[3]);
+                duplicate.put("Email", fileContent.split("\n")[duplicates[i][0]].split(",")[4]);
+                duplicate.put("Address 1", fileContent.split("\n")[duplicates[i][0]].split(",")[5]);
+                duplicate.put("Address 2", fileContent.split("\n")[duplicates[i][0]].split(",")[6]);
+                duplicate.put("Zip", fileContent.split("\n")[duplicates[i][0]].split(",")[7]);
+                duplicate.put("State Long", fileContent.split("\n")[duplicates[i][0]].split(",")[9]);
+                duplicate.put("State", fileContent.split("\n")[duplicates[i][0]].split(",")[10]);
+                duplicate.put("Phone", fileContent.split("\n")[duplicates[i][0]].split(",")[11]);
 
                 entry.put("duplicate", duplicate);
 

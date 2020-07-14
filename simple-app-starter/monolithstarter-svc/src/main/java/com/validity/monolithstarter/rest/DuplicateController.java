@@ -11,19 +11,19 @@ import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;
 
 @RestController
-@RequestMapping("/api2")
+@RequestMapping("/api")
 public class DuplicateController {
 
     @Inject
     private DuplicateService duplicateservice;
 
     @GetMapping("/duplicate")
-    public JSONObject getDuplicates() {
-        return DuplicateService.createJsonWithOnlyDuplicates("/Validity_Take_Home/simple-app-starter/test-files/normal.csv");
+    public String getDuplicates() {
+        return duplicateservice.createJsonWithOnlyDuplicates("../../../../../../../test-files/normal.csv");
     }
 
     @GetMapping("/nonDuplicate")
-    public JSONObject getNonDuplicates{
-        return DuplicateService.createJsonWithoutDuplicates("/Validity_Take_Home/simple-app-starter/test-files/normal.csv");
+    public String getNonDuplicates(){
+        return duplicateservice.createJsonWithoutDuplicates("../../../../../../../test-files/normal.csv");
     }
 }

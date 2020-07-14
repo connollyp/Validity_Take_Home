@@ -50,7 +50,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef6e51dc-98d8-4ee8-b637-9690f746f04c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/json-simple-1.1.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Validity_Take_Home.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Validity_Take_Home.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/java/com/validity/monolithstarter/MonolithStarterApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/java/com/validity/monolithstarter/MonolithStarterApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/MonolithStarterApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/MonolithStarterApp.class" afterDir="false" />
     </list>
@@ -76,6 +79,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/simple-app-starter/monolithstarter-static" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -141,9 +147,13 @@
       <screen x="-128" y="-1080" width="1920" height="1080" />
     </state>
     <state width="1878" height="305" key="GridCell.Tab.0.right/1792.-1267.1080.1920/-128.-1080.1920.1080/0.0.1792.1120@-128.-1080.1920.1080" timestamp="1594665055774" />
-    <state x="539" y="-908" width="678" height="735" key="find.popup" timestamp="1594666887217">
+    <state x="320" y="-959" key="SettingsEditor" timestamp="1594739867291">
       <screen x="-128" y="-1080" width="1920" height="1080" />
     </state>
-    <state x="539" y="-908" width="678" height="735" key="find.popup/1792.-1267.1080.1920/-128.-1080.1920.1080/0.0.1792.1120@-128.-1080.1920.1080" timestamp="1594666887217" />
+    <state x="320" y="-959" key="SettingsEditor/1792.-1267.1080.1920/-128.-1080.1920.1080/0.0.1792.1120@-128.-1080.1920.1080" timestamp="1594739867291" />
+    <state x="539" y="-908" width="762" height="735" key="find.popup" timestamp="1594678603307">
+      <screen x="-128" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="539" y="-908" width="762" height="735" key="find.popup/1792.-1267.1080.1920/-128.-1080.1920.1080/0.0.1792.1120@-128.-1080.1920.1080" timestamp="1594678603307" />
   </component>
 </project>

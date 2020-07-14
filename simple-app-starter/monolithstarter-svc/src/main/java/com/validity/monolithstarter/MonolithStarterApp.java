@@ -22,6 +22,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
+
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class MonolithStarterApp implements InitializingBean {
 
@@ -59,8 +62,8 @@ public class MonolithStarterApp implements InitializingBean {
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);
-        String test = getFileContents("/Users/patrickconnolly/Documents/Job Search/Validity_Take_Home/simple-app-starter/test-files/normal.csv");
         detectDuplicates("/Users/patrickconnolly/Documents/Job Search/Validity_Take_Home/simple-app-starter/test-files/normal.csv");
+        createJson("/Users/patrickconnolly/Documents/Job Search/Validity_Take_Home/simple-app-starter/test-files/normal.csv");
     }
 
     private static void logApplicationStartup(Environment env) {
@@ -238,6 +241,18 @@ public class MonolithStarterApp implements InitializingBean {
         }
 
         return duplicates;
+    }
+
+    public static JSONObject createJson(String filepath){
+        JSONObject json = new JSONObject();
+
+        json.put("test1", "value1");
+
+        String test = json.toString();
+
+        System.out.println(test);
+
+        return json;
     }
 
 

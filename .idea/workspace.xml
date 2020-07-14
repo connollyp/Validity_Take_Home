@@ -50,8 +50,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef6e51dc-98d8-4ee8-b637-9690f746f04c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-static/src/actions/duplicateActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-static/src/components/Duplicates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-static/src/components/nonDuplicates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-static/src/pages/DuplicatesPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/java/com/validity/monolithstarter/rest/DuplicateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/java/com/validity/monolithstarter/service/DuplicateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-static/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-static/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-static/src/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-static/src/pages/HomePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/java/com/validity/monolithstarter/MonolithStarterApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/java/com/validity/monolithstarter/MonolithStarterApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/MonolithStarterApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/MonolithStarterApp.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,9 +156,9 @@
       <screen x="-128" y="-1080" width="1920" height="1080" />
     </state>
     <state x="320" y="-959" key="SettingsEditor/1792.-1267.1080.1920/-128.-1080.1920.1080/0.0.1792.1120@-128.-1080.1920.1080" timestamp="1594751252534" />
-    <state x="539" y="-908" width="762" height="735" key="find.popup" timestamp="1594678603307">
+    <state x="539" y="-908" width="762" height="735" key="find.popup" timestamp="1594754599387">
       <screen x="-128" y="-1080" width="1920" height="1080" />
     </state>
-    <state x="539" y="-908" width="762" height="735" key="find.popup/1792.-1267.1080.1920/-128.-1080.1920.1080/0.0.1792.1120@-128.-1080.1920.1080" timestamp="1594678603307" />
+    <state x="539" y="-908" width="762" height="735" key="find.popup/1792.-1267.1080.1920/-128.-1080.1920.1080/0.0.1792.1120@-128.-1080.1920.1080" timestamp="1594754599387" />
   </component>
 </project>

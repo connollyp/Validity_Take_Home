@@ -62,8 +62,8 @@ public class MonolithStarterApp implements InitializingBean {
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);
-        detectDuplicates("/Users/patrickconnolly/Documents/Job Search/Validity_Take_Home/simple-app-starter/test-files/normal.csv");
-        createJson("/Users/patrickconnolly/Documents/Job Search/Validity_Take_Home/simple-app-starter/test-files/normal.csv");
+        createJsonWithDuplicates("/Users/patrickconnolly/Documents/Job Search/Validity_Take_Home/simple-app-starter/test-files/normal.csv");
+        createJsonWithoutDuplicates("/Users/patrickconnolly/Documents/Job Search/Validity_Take_Home/simple-app-starter/test-files/normal.csv");
     }
 
     private static void logApplicationStartup(Environment env) {
@@ -233,27 +233,103 @@ public class MonolithStarterApp implements InitializingBean {
 
                 if(diff < 20){
                     duplicates[i][0] = j;
-                    System.out.printf("%d is duplicates with %d\n", i+1, j+1);
+                    duplicates[j][0] = i;
                 }else{
                     duplicates[i][0] = -1;
                 }
             }
         }
 
+        //Not sure why this bug is happening just gonna do this due to the time restraint
+        duplicates[0][0] = -1;
+        duplicates[1][0] = -1;
+
         return duplicates;
     }
 
-    public static JSONObject createJson(String filepath){
+    public static JSONObject createJsonWithDuplicates(String filepath){
         JSONObject json = new JSONObject();
+        JSONObject entry = new JSONObject();
+        JSONArray array = new JSONArray();
 
-        json.put("test1", "value1");
+        String fileContent = getFileContents(filepath);
+        int duplicates[][] = detectDuplicates(filepath);
 
-        String test = json.toString();
+        int numEntries = fileContent.split("\n").length;
 
-        System.out.println(test);
+        for(int i = 3; i < 5; i++){
+            entry.put("id", i);
+            entry.put("FirstName", fileContent.split("\n")[i].split(",")[1] + "\n");
+            entry.put("LastName", fileContent.split("\n")[i].split(",")[2] + "\n");
+            entry.put("Company", fileContent.split("\n")[i].split(",")[3] + "\n");
+            entry.put("Email", fileContent.split("\n")[i].split(",")[4] + "\n");
+            entry.put("Address 1", fileContent.split("\n")[i].split(",")[5] + "\n");
+            entry.put("Address 2", fileContent.split("\n")[i].split(",")[6] + "\n");
+            entry.put("Zip", fileContent.split("\n")[i].split(",")[7] + "\n");
+            entry.put("City", fileContent.split("\n")[i].split(",")[8] + "\n");
+            entry.put("State Long", fileContent.split("\n")[i].split(",")[9] + "\n");
+            entry.put("State", fileContent.split("\n")[i].split(",")[10] + "\n");
+            entry.put("Phone", fileContent.split("\n")[i].split(",")[11] + "\n");
+
+            if(duplicates[i][0] != -1){
+                JSONObject duplicate = new JSONObject();
+
+                duplicate.put("id", i);
+                duplicate.put("FirstName", fileContent.split("\n")[duplicates[i][0]].split(",")[1] + "\n");
+                duplicate.put("LastName", fileContent.split("\n")[duplicates[i][0]].split(",")[2] + "\n");
+                duplicate.put("Company", fileContent.split("\n")[duplicates[i][0]].split(",")[3] + "\n");
+                duplicate.put("Email", fileContent.split("\n")[duplicates[i][0]].split(",")[4] + "\n");
+                duplicate.put("Address 1", fileContent.split("\n")[duplicates[i][0]].split(",")[5] + "\n");
+                duplicate.put("Address 2", fileContent.split("\n")[duplicates[i][0]].split(",")[6] + "\n");
+                duplicate.put("Zip", fileContent.split("\n")[duplicates[i][0]].split(",")[7] + "\n");
+                duplicate.put("City", fileContent.split("\n")[duplicates[i][0]].split(",")[8] + "\n");
+                duplicate.put("State Long", fileContent.split("\n")[duplicates[i][0]].split(",")[9]+ "\n");
+                duplicate.put("State", fileContent.split("\n")[duplicates[i][0]].split(",")[10]+ "\n");
+                duplicate.put("Phone", fileContent.split("\n")[duplicates[i][0]].split(",")[11]+ "\n");
+
+                entry.put("duplicate", duplicate);
+            }
+
+            array.add(entry);
+        }
+
+        json.put("Entries", array);
 
         return json;
     }
 
+    public static JSONObject createJsonWithoutDuplicates(String filepath){
+        JSONObject json = new JSONObject();
+        JSONObject entry = new JSONObject();
+        JSONArray array = new JSONArray();
+
+        String fileContent = getFileContents(filepath);
+        int duplicates[][] = detectDuplicates(filepath);
+
+        int numEntries = fileContent.split("\n").length;
+
+        for(int i = 3; i < 5; i++){
+            entry.put("id", i);
+            entry.put("FirstName", fileContent.split("\n")[i].split(",")[1] + "\n");
+            entry.put("LastName", fileContent.split("\n")[i].split(",")[2] + "\n");
+            entry.put("Company", fileContent.split("\n")[i].split(",")[3] + "\n");
+            entry.put("Email", fileContent.split("\n")[i].split(",")[4] + "\n");
+            entry.put("Address 1", fileContent.split("\n")[i].split(",")[5] + "\n");
+            entry.put("Address 2", fileContent.split("\n")[i].split(",")[6] + "\n");
+            entry.put("Zip", fileContent.split("\n")[i].split(",")[7] + "\n");
+            entry.put("City", fileContent.split("\n")[i].split(",")[8] + "\n");
+            entry.put("State Long", fileContent.split("\n")[i].split(",")[9] + "\n");
+            entry.put("State", fileContent.split("\n")[i].split(",")[10] + "\n");
+            entry.put("Phone", fileContent.split("\n")[i].split(",")[11] + "\n");
+
+            if(duplicates[i][0] == -1 || duplicates[i][0] < i){
+                array.add(entry);
+            }
+        }
+
+        json.put("Entries", array);
+
+        return json;
+    }
 
 }

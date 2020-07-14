@@ -50,10 +50,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef6e51dc-98d8-4ee8-b637-9690f746f04c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/json-simple-1.1.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Validity_Take_Home.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Validity_Take_Home.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/java/com/validity/monolithstarter/MonolithStarterApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/src/main/java/com/validity/monolithstarter/MonolithStarterApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/MonolithStarterApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/MonolithStarterApp.class" afterDir="false" />
     </list>

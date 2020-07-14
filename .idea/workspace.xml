@@ -79,6 +79,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -144,10 +145,10 @@
       <screen x="-128" y="-1080" width="1920" height="1080" />
     </state>
     <state width="1878" height="305" key="GridCell.Tab.0.right/1792.-1267.1080.1920/-128.-1080.1920.1080/0.0.1792.1120@-128.-1080.1920.1080" timestamp="1594665055774" />
-    <state x="320" y="-959" key="SettingsEditor" timestamp="1594739867291">
+    <state x="320" y="-959" key="SettingsEditor" timestamp="1594751252534">
       <screen x="-128" y="-1080" width="1920" height="1080" />
     </state>
-    <state x="320" y="-959" key="SettingsEditor/1792.-1267.1080.1920/-128.-1080.1920.1080/0.0.1792.1120@-128.-1080.1920.1080" timestamp="1594739867291" />
+    <state x="320" y="-959" key="SettingsEditor/1792.-1267.1080.1920/-128.-1080.1920.1080/0.0.1792.1120@-128.-1080.1920.1080" timestamp="1594751252534" />
     <state x="539" y="-908" width="762" height="735" key="find.popup" timestamp="1594678603307">
       <screen x="-128" y="-1080" width="1920" height="1080" />
     </state>

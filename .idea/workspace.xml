@@ -50,14 +50,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef6e51dc-98d8-4ee8-b637-9690f746f04c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/monolithstarter-0.0.8-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/monolithstarter-0.0.8-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-static/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-static/coverage/clover.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-static/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-static/coverage/lcov-report/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/service/DuplicateService.class" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/service/DuplicateService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/rest/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/simple-app-starter/monolithstarter-svc/target/classes/com/validity/monolithstarter/rest/HelloController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

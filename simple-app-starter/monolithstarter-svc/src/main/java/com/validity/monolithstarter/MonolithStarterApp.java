@@ -62,9 +62,6 @@ public class MonolithStarterApp implements InitializingBean {
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);
-//        createJsonWithDuplicates("/Users/patrickconnolly/Documents/Job Search/Validity_Take_Home/simple-app-starter/test-files/normal.csv");
-//        createJsonWithoutDuplicates("/Users/patrickconnolly/Documents/Job Search/Validity_Take_Home/simple-app-starter/test-files/normal.csv");
-        createJsonWithOnlyDuplicates("/Users/patrickconnolly/Documents/Job Search/Validity_Take_Home/simple-app-starter/test-files/normal.csv");
     }
 
     private static void logApplicationStartup(Environment env) {
@@ -99,6 +96,17 @@ public class MonolithStarterApp implements InitializingBean {
             env.getActiveProfiles());
     }
 
+    /**
+     * Find the minimum of three values
+     *
+     * @param a - first value to compare
+     *
+     * @param b - second value to compare
+     *
+     * @param c - third value to compare
+     *
+     * @return the minimum value of the 3 parameters
+     */
     public static int Min(int a, int b, int c){
         int min = a; //Minimum distance, defaults to a
 
@@ -113,15 +121,27 @@ public class MonolithStarterApp implements InitializingBean {
         return min;
     }
 
-    //Generic implementation of the Levenshtein algorithm to find the difference between two strings
-    // Based off of this implementation https://people.cs.pitt.edu/~kirk/cs1501/Pruhs/Spring2006/assignments/editdistance/Levenshtein%20Distance.htm
+
+    /**
+     * Generic implementation of the Levenshtein algorithm to find the difference between two strings
+     * Based off of https://people.cs.pitt.edu/~kirk/cs1501/Pruhs/Spring2006/assignments/editdistance/Levenshtein%20Distance.htm
+     *
+     * @param s - first string to be compared
+     *
+     * @param t - second string to be compared
+     *
+     * @return the numeric differnce between the two strings
+     */
     public static int Levenshtein(String s, String t){
         int distances[][]; //Keeps track of differences between the two strings
         int n; //Length of string s
         int m; //Length of string t
+
         char si; //Current char being stored from s
         char tj; //Current char being stored from t
+
         int diff; //Integer value to determine difference between two chars
+
         int i;
         int j;
 
@@ -169,9 +189,16 @@ public class MonolithStarterApp implements InitializingBean {
     }
 
 
-    //Gets the conetents of the specified file and returns it as a string
+    /**
+     * Returns a string that contains all the content of the file specified
+     *
+     * @param filepath - path to file that contains data
+     *
+     * @return a string that contains the contents of the specified file
+     */
     public static String getFileContents(String filepath){
         BufferedReader br = null;
+
         String fileContent = "";
         String input = "";
 
@@ -200,8 +227,17 @@ public class MonolithStarterApp implements InitializingBean {
         return fileContent;
     }
 
+    /**
+     * Creates an array with an index for each entry, if that entry is determined to have a duplicate the row number of the duplicate
+     * is placed inside the entry's index, if not -1 is stored in the entry's index
+     *
+     * @param filepath - path to file that contains data
+     *
+     * @return a two dimensional array with the each entries duplicate index stored
+     */
     public static int[][] detectDuplicates(String filepath){
         String fileContent = getFileContents(filepath);
+
         int numRows = fileContent.split("\n").length;
         int numColumns = fileContent.split("\n")[0].split(",").length;
 
@@ -248,6 +284,13 @@ public class MonolithStarterApp implements InitializingBean {
         return duplicates;
     }
 
+    /**
+     * Creates a json object of all entries, if there are duplicate entries the duplicate is appended to the json data for that entry
+     *
+     * @param filepath - path to the file that contains the data
+     *
+     * @return - json object of all entries
+     */
     public static JSONObject createJsonWithDuplicates(String filepath){
         JSONObject json = new JSONObject();
         JSONObject entry = new JSONObject();
@@ -299,6 +342,13 @@ public class MonolithStarterApp implements InitializingBean {
         return json;
     }
 
+    /**
+     * Creates a json object of entries that are unique, take entry with the highest id from duplicate pairs
+     *
+     * @param filepath - path to the file that contains data
+     *
+     * @return json object of entries with no duplications
+     */
     public static JSONObject createJsonWithoutDuplicates(String filepath){
         JSONObject json = new JSONObject();
         JSONObject entry = new JSONObject();
@@ -333,6 +383,14 @@ public class MonolithStarterApp implements InitializingBean {
         return json;
     }
 
+    /**
+     * Creates a json object that only contains entries that have duplicates, only returns one of each duplicate pair
+     * but has duplicate as a part of the entry data in the json
+     *
+     * @param filepath - path to file that contains data
+     *
+     * @return json object that contains only entries with duplicates
+     */
     public static JSONObject createJsonWithOnlyDuplicates(String filepath){
         JSONObject json = new JSONObject();
         JSONObject entry = new JSONObject();
@@ -342,8 +400,6 @@ public class MonolithStarterApp implements InitializingBean {
         int duplicates[][] = detectDuplicates(filepath);
 
         int numRows = fileContent.split("\n").length;
-
-        int numDups = 0;
 
         for(int i = 1; i < numRows; i++){
             if(duplicates[i][0] != -1 && duplicates[i][0] < i){
@@ -378,15 +434,10 @@ public class MonolithStarterApp implements InitializingBean {
                 entry.put("duplicate", duplicate);
 
                 array.add(entry);
-                numDups++;
             }
         }
 
         json.put("Entries", array);
-
-        String test = json.toString();
-        System.out.println(test);
-        System.out.printf("NumDups is %d\n", numDups);
 
         return json;
     }

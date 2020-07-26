@@ -87,9 +87,4 @@ public class MonolithStarterApp implements InitializingBean {
             contextPath,
             env.getActiveProfiles());
     }
-
-    private static void test(){
-        System.out.println("Hello World");
-    }
-
 }
